@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>javaScript Form Validation</title>
+
+    <!-- Boxicons CDN link -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Icon CDN link -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <section class="container">
+        <form id="form" class="form">
+          <h2>Register Form</h2>
+          <div class="form-control">
+            <label for="username"
+              ><i class="bx bx-user-circle"></i> Username</label
+            >
+            <input type="text" id="username" placeholder="Enter username" />
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="email"><i class="bx bx-envelope"></i> Email</label>
+            <input type="email" id="email" placeholder="Enter email" />
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="password"
+              ><i class="bx bx-lock-alt"></i> Password</label
+            >
+            <input
+              type="password"
+              id="password"
+              maxlength="8"
+              placeholder="Enter Password"
+            />
+            <i class="bx bx-hide" id="toggleShowBtn"></i>
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="password2"
+              ><i class="bx bx-lock"></i> Confirm Password</label
+            >
+            <input
+              type="password"
+              id="password2"
+              maxlength="8"
+              placeholder="Enter Same Password"
+            />
+            <!-- pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,8}$" -->
+            <i class="bx bx-hide" id="toggleShowBtn2"></i>
+            <small>Error message</small>
+          </div>
+          <button type="submit" class="submitBtn">Submit</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

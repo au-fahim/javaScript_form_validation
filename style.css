@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Source+Sans+Pro:wght@400;700&display=swap");
+
+:root {
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+  --blue-color: #3498db;
+  --darkBlue-color: #287fb8;
+  --whiteCream-color: #f9fafb;
+  --darkGray-color: #777777;
+  --dark-color: ;
+
+  --header-font: "Righteous", cursive;
+  --primary-font: "Source Sans Pro", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  align-items: center;
+  background-color: var(--whiteCream-color);
+  display: flex;
+  font-family: var(--primary-font);
+  justify-content: center;
+  min-height: 100vh;
+}
+
+section.container {
+  backdrop-filter: blur(10px);
+  background-color: #fff;
+  border-radius: 5px;
+  border: 0px solid #5c5c5c;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  min-width: 25rem;
+}
+
+form#form {
+  padding: 2rem;
+}
+
+form#form h2 {
+  font-family: var(--primary-font);
+  font-size: 2rem;
+  margin: 0 0 2rem;
+  text-align: center;
+}
+
+.form-control {
+  display: flex;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  flex-direction: column;
+  position: relative;
+}
+
+.form-control label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  color: var(--darkGray-color);
+}
+
+.form-control i {
+  margin-right: 5px;
+}
+
+.form-control input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #f0f0f0;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+  position: relative;
+}
+
+#toggleShowBtn,
+#toggleShowBtn2 {
+  position: absolute;
+  right: 0;
+  top: 32%;
+  padding: 10px;
+  cursor: pointer;
+  color: var(--darkGray-color);
+}
+
+.form-control input:focus {
+  outline: 0;
+  border-color: var(--darkGray-color);
+}
+
+.form-control.success input {
+  border-color: var(--success-color);
+}
+
+.form-control.error input {
+  border-color: var(--error-color);
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.form-control small {
+  font-size: 0.9rem;
+  margin-left: 5px;
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+button.submitBtn {
+  background: var(--blue-color);
+  color: white;
+  cursor: pointer;
+  border: 0px solid var(--blue-color);
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+button.submitBtn:active {
+  background: var(--darkBlue-color);
+}
